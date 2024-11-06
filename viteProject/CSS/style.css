@@ -55,16 +55,29 @@ body {
     color: var(--primary);
     height: 10rem;
     width: 20rem;
+
 }
 
 .color-swap:hover {
     transform: translate(0.5rem, 0.5rem);
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
 }
+.container{
+    width: 85vw;
+    margin: auto;
+    color: #000000;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    grid-row-gap: 2vw;
+    padding: 1rem;
+}
 .card{
-    background-color: transparent;
+    background-color: var(--secondary);
     height: auto;
-    width: auto;
+    width: 25%;
     margin-top: 2%;
     padding: 1em; 
     border: .5rem solid black;
@@ -92,6 +105,7 @@ body {
 .card-desc, .card-rating{
     text-align: center;
     width: auto;
+    font-size: 1.2rem;
 }
 @media (max-width: 1290px) {
     h1 {
