@@ -3,9 +3,7 @@ html, body, * {
     padding: 0;
     box-sizing: border-box;
     font-size: 10px;
-    transition: all 0.5s;
 }
-
 :root {
     --blue: #2998FF;
     --yellow: #FDEF79;
@@ -40,7 +38,9 @@ body {
     color: var(--font-color);
     background-color: var(--primary);
 }
-
+* {
+    transition: all 0.5s;
+}
 .day {
     --primary: var(--blue);
     --secondary: var(--yellow);
@@ -51,14 +51,14 @@ body {
     --secondary: var(--white);
 }
 
-.color-swap {
+.button {
     color: var(--primary);
     height: 10rem;
     width: 20rem;
 
 }
 
-.color-swap:hover {
+.button:hover {
     transform: translate(0.5rem, 0.5rem);
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
 }
@@ -72,6 +72,17 @@ body {
     flex-direction: row;
     justify-content: center;
     grid-row-gap: 2vw;
+    padding: 1rem;
+}
+.btncontainer{
+    width: 85vw;
+    margin: auto;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    grid-row-gap: 1rem;
     padding: 1rem;
 }
 .card{
