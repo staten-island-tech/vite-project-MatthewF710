@@ -1,17 +1,17 @@
 //USE NODE VERSION 18!!!
-import "../CSS/style.css";
+import "./CSS/style.css";
 import { cardarray } from "./arrays.js";
-import { DOMSelectors } from "./DOMSelectors.js";
+import { DOMSelectors } from "/DOMSelector.js";
 createCards(cardarray);
 function sortbyrating(x) {
   DOMSelectors.container.innerHTML = "";
   DOMSelectors.sorterbtn.innerHTML =
-    "Click here to change how the cards are <br>Current Sort: Rating";
+    "Click here to change how the cards are Current Sort: Rating";
 }
 function sortbyname(x) {
   DOMSelectors.container.innerHTML = "";
   DOMSelectors.sorterbtn.innerHTML =
-    "Click here to change how the cards are <br>Current Sort: Name";
+    "Click here to change how the cards are Current Sort: Name";
 }
 function createCards(x) {
   x.forEach((item) =>
