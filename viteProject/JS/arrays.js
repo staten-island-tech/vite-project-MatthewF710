@@ -4,7 +4,7 @@ const cardarray = [
     genre: "Action-Adventure",
     rating: 10,
     description: "An immersive open-world game set in the American Wild West.",
-    imageLink: "",
+    imageLink: "../images/rdr2.png",
     altText: "Red Dead Redemption 2 cover art",
   },
   {
@@ -13,7 +13,7 @@ const cardarray = [
     rating: 10,
     description:
       "An open-world adventure game that redefines exploration and gameplay.",
-    imageLink: "",
+    imageLink: "../images/botw.png",
     altText: "The Legend of Zelda: Breath of the Wild cover art",
   },
   {
@@ -22,7 +22,7 @@ const cardarray = [
     rating: 10,
     description:
       "An expansive RPG with deep storytelling and a richly detailed world.",
-    imageLink: "",
+    imageLink: "../images/tw3.png",
     altText: "The Witcher 3: Wild Hunt cover art",
   },
   {
@@ -31,7 +31,7 @@ const cardarray = [
     rating: 9.8,
     description:
       "A precision platformer about climbing a mountain and facing inner demons.",
-    imageLink: "",
+    imageLink: "../images/celeste.png",
     altText: "Celeste cover art",
   },
   {
@@ -40,7 +40,7 @@ const cardarray = [
     rating: 9.8,
     description:
       "An intense action game focused on stealth and precision combat.",
-    imageLink: "",
+    imageLink: "../images/sekiro.png",
     altText: "Sekiro: Shadows Die Twice cover art",
   },
   {
@@ -49,7 +49,7 @@ const cardarray = [
     rating: 9.7,
     description:
       "A challenging action RPG known for its deep lore and tough combat.",
-    imageLink: "",
+    imageLink: "../images/darksouls3.png",
     altText: "Dark Souls III cover art",
   },
   {
@@ -58,7 +58,7 @@ const cardarray = [
     rating: 9.6,
     description:
       "A first-person puzzle game that uses portal mechanics in innovative ways.",
-    imageLink: "",
+    imageLink: "../images/portal2.png",
     altText: "Portal 2 cover art",
   },
   {
@@ -67,7 +67,7 @@ const cardarray = [
     rating: 9.5,
     description:
       "A narrative-driven action game that explores fatherhood and Norse mythology.",
-    imageLink: "",
+    imageLink: "../images/gow.png",
     altText: "God of War (2018) cover art",
   },
   {
@@ -76,7 +76,7 @@ const cardarray = [
     rating: 9.5,
     description:
       "A challenging platformer set in a beautifully hand-drawn world.",
-    imageLink: "",
+    imageLink: "../images/hollowknight.png",
     altText: "Hollow Knight cover art",
   },
   {
@@ -85,7 +85,7 @@ const cardarray = [
     rating: 9.5,
     description:
       "A stylish JRPG that blends life simulation with turn-based combat.",
-    imageLink: "",
+    imageLink: "../images/p5.png",
     altText: "Persona 5 cover art",
   },
   {
@@ -94,7 +94,7 @@ const cardarray = [
     rating: 9.4,
     description:
       "A team-based multiplayer shooter with a diverse cast of characters.",
-    imageLink: "",
+    imageLink: "../images/ow.png",
     altText: "Overwatch cover art",
   },
   {
@@ -103,7 +103,7 @@ const cardarray = [
     rating: 9.3,
     description:
       "A reimagining of the classic RPG with stunning visuals and real-time combat.",
-    imageLink: "",
+    imageLink: "../images/ff7.png",
     altText: "Final Fantasy VII Remake cover art",
   },
   {
@@ -112,7 +112,7 @@ const cardarray = [
     rating: 9.2,
     description:
       "A life simulation game where players create and manage their own island paradise.",
-    imageLink: "",
+    imageLink: "../images/acnh.png",
     altText: "Animal Crossing: New Horizons cover art",
   },
   {
@@ -121,7 +121,7 @@ const cardarray = [
     rating: 9,
     description:
       "A sandbox game that allows for endless creativity and survival gameplay.",
-    imageLink: "",
+    imageLink: "../images/mc.png",
     altText: "Minecraft cover art",
   },
   {
@@ -130,7 +130,7 @@ const cardarray = [
     rating: 9,
     description:
       "A farming simulation game that combines farming, crafting, and friendship.",
-    imageLink: "",
+    imageLink: "../images/stardewvalley.png",
     altText: "Stardew Valley cover art",
   },
   {
@@ -139,7 +139,7 @@ const cardarray = [
     rating: 8.9,
     description:
       "A first-person adventure game about a fire lookout's journey through the Wyoming wilderness.",
-    imageLink: "",
+    imageLink: "../images/firewatch.png",
     altText: "Firewatch cover art",
   },
   {
@@ -148,7 +148,7 @@ const cardarray = [
     rating: 8.8,
     description:
       "A challenging run-and-gun game with 1930s-inspired cartoon visuals.",
-    imageLink: "",
+    imageLink: "../images/cuphead.png",
     altText: "Cuphead cover art",
   },
   {
@@ -156,7 +156,7 @@ const cardarray = [
     genre: "Survival",
     rating: 8.7,
     description: "An underwater survival game set on an alien ocean planet.",
-    imageLink: "",
+    imageLink: "../images/subnautica.png",
     altText: "Subnautica cover art",
   },
   {
@@ -165,7 +165,7 @@ const cardarray = [
     rating: 8.5,
     description:
       "A story-driven game set in medieval France amidst a rat plague.",
-    imageLink: "",
+    imageLink: "../images/apti.png",
     altText: "A Plague Tale: Innocence cover art",
   },
   {
@@ -174,7 +174,7 @@ const cardarray = [
     rating: 8.3,
     description:
       "A card-based roguelike where players build unique decks to defeat foes.",
-    imageLink: "",
+    imageLink: "../images/slaythespire.png",
     altText: "Slay the Spire cover art",
   },
 ];

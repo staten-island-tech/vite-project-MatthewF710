@@ -5,13 +5,14 @@ html, body, * {
     font-size: 10px;
 }
 :root {
-    --blue: #2998FF;
-    --yellow: #FDEF79;
+    --purple: #AB196F;
+    --green: #2BFDAF;
     --black: #000000;
+    --gray: #b4b4b4;
     --white: #FFFFFF;
-    --primary: var(--blue);
-    --secondary: var(--yellow);
-    --font-color: #FFFFFF;
+    --primary: var(--purple);
+    --secondary: var(--green);
+    --font-color: var(--black);
     --h1: 7.5rem;
     --h2: 6rem;
     --h3: 4.5rem;
@@ -41,18 +42,19 @@ body {
 * {
     transition: all 0.5s;
 }
-.day {
-    --primary: var(--blue);
-    --secondary: var(--yellow);
+.retro {
+    --primary: var(--green);
+    --secondary: var(--purple);
 }
 
-.night {
-    --primary: var(--black);
+.modern {
+    --primary: var(--gray);
     --secondary: var(--white);
 }
 
 .button {
-    color: var(--primary);
+    color: var(--black);
+    background-color: var(--secondary);
     height: 10rem;
     width: 20rem;
 

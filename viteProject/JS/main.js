@@ -1,19 +1,9 @@
 //USE NODE VERSION 18!!!
-import "./CSS/style.css";
+import "../CSS/style.css";
 import { cardarray } from "./arrays.js";
-import { DOMSelectors } from "/DOMSelector.js";
-createCards(cardarray);
-function sortbyrating(x) {
-  DOMSelectors.container.innerHTML = "";
-  DOMSelectors.sorterbtn.innerHTML =
-    "Click here to change how the cards are Current Sort: Rating";
-}
-function sortbyname(x) {
-  DOMSelectors.container.innerHTML = "";
-  DOMSelectors.sorterbtn.innerHTML =
-    "Click here to change how the cards are Current Sort: Name";
-}
+import { DOMSelectors } from "./DOMSelectors.js";
 function createCards(x) {
+  DOMSelectors.container.innerHTML = "";
   x.forEach((item) =>
     DOMSelectors.container.insertAdjacentHTML(
       "beforeEnd",
@@ -21,16 +11,59 @@ function createCards(x) {
     )
   );
 }
+function ratingsorter(x) {
+  for (let i = 1; i < x.length; i++) {
+    let item = x[i];
+    let nextitem = i - 1;
+    while (nextitem >= 0 && x[nextitem].rating < item.rating) {
+      x[nextitem + 1] = x[nextitem];
+      nextitem--;
+    }
+    x[nextitem + 1] = item;
+  }
+}
+function sortbyrating(x) {
+  ratingsorter(x);
+  createCards(x);
+}
+function namingsorter(x) {
+  for (let i = 1; i < x.length; i++) {
+    let item = x[i];
+    let nextitem = i - 1;
+    while (nextitem >= 0 && x[nextitem].title.localeCompare(item.title) > 0) {
+      x[nextitem + 1] = x[nextitem];
+      nextitem--;
+    }
+    x[nextitem + 1] = item;
+  }
+}
+function sortbyname(x) {
+  namingsorter(x);
+  createCards(x);
+}
+createCards(cardarray);
 DOMSelectors.colorswapper.addEventListener("click", function () {
-  if (document.body.classList.contains("day")) {
-    document.body.classList.add("night");
-    document.body.classList.remove("day");
+  if (document.body.classList.contains("retro")) {
+    document.body.classList.add("modern");
+    document.body.classList.remove("retro");
     DOMSelectors.colorswapper.innerHTML =
-      "Click here for color swap. <br>Theme: Night";
+      "Click here for color swap. <br>Theme: Modern";
   } else {
-    document.body.classList.add("day");
-    document.body.classList.remove("night");
+    document.body.classList.add("retro");
+    document.body.classList.remove("modern");
     DOMSelectors.colorswapper.innerHTML =
-      "Click here for color swap. <br>Theme: Day";
+      "Click here for color swap. <br>Theme: Retro";
+  }
+});
+DOMSelectors.sorterbtn.addEventListener("click", function () {
+  console.log(DOMSelectors.sorterbtn.innerHTML);
+  if (DOMSelectors.sorterbtn.innerHTML.includes("Rating")) {
+    sortbyname(cardarray);
+    DOMSelectors.sorterbtn.innerHTML =
+      "Click here to change how the cards are Current Sort: Name";
+  } else {
+    DOMSelectors.sorterbtn.innerHTML =
+      "Click here to change how the cards are Current Sort: Rating";
+    sortbyrating(cardarray);
   }
 });
