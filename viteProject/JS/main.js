@@ -27,19 +27,23 @@ function sortbyrating(x) {
   createCards(x);
 }
 function namingsorter(x) {
-  x.forEach((item, index) => {
-    for (let i = index + 1; i < x.length; i++) {
-      let nextitem = x[i];
-      if (item.title.localeCompare(nextitem.title) > 0) {
-        //compares 2 items, if current item comes after the next one it returns a positive value, meaning it has to swap the two values
-        [x[index], x[i]] = [x[i], x[index]];
-      }
+  for (let i = 1; i < x.length; i++) {
+    let item = x[i];
+    let nextitem = i - 1;
+    while (nextitem >= 0 && x[nextitem].title.localeCompare(item.title) > 0) {
+      //compares 2 items, if current item comes after the next one it returns a positive value, meaning it has to swap the two values
+      x[nextitem + 1] = x[nextitem];
+      nextitem--;
     }
-  });
+    x[nextitem + 1] = item;
+  }
 }
 function sortbyname(x) {
   namingsorter(x);
   createCards(x);
+}
+function cardreverse(x) {
+  x.reverse(); //reverses the order of all items in an array
 }
 createCards(cardarray);
 DOMSelectors.colorswapper.addEventListener("click", function () {
@@ -56,7 +60,6 @@ DOMSelectors.colorswapper.addEventListener("click", function () {
   }
 });
 DOMSelectors.sorterbtn.addEventListener("click", function () {
-  console.log(DOMSelectors.sorterbtn.innerHTML);
   if (DOMSelectors.sorterbtn.innerHTML.includes("Rating")) {
     sortbyname(cardarray);
     DOMSelectors.sorterbtn.innerHTML =
@@ -66,4 +69,8 @@ DOMSelectors.sorterbtn.addEventListener("click", function () {
       "Click here to change how the cards are sorted. <br>Current Sort: Rating";
     sortbyrating(cardarray);
   }
+});
+DOMSelectors.reversebutton.addEventListener("click", function () {
+  cardreverse(cardarray);
+  createCards(cardarray);
 });
